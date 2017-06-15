@@ -15,7 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/surveyer")
-public class RESTSurveyerController {
+public class SurveyerController {
     @Autowired
     private SurveyerService surveyerService;
 
