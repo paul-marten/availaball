@@ -19,7 +19,8 @@ public class FutsalField implements Serializable {
     private String openingHours;
     private String closingHours;
     private String price;
-    private int idSurveyer;
+    private Account account;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -77,7 +78,7 @@ public class FutsalField implements Serializable {
         this.openingHours = openingHours;
     }
 
-    @Column (name = "closing_horus")
+    @Column (name = "closing_hours")
     public String getClosingHours() {
         return closingHours;
     }
@@ -95,12 +96,13 @@ public class FutsalField implements Serializable {
         this.price = price;
     }
 
-    @Column (name = "id_surveyer")
-    public int getIdSurveyer() {
-        return idSurveyer;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_surveyer")
+    public Account getAccount() {
+        return account;
     }
 
-    public void setIdSurveyer(int idSurveyer) {
-        this.idSurveyer = idSurveyer;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
