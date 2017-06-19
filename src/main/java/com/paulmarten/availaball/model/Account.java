@@ -1,5 +1,7 @@
 package com.paulmarten.availaball.model;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.paulmarten.availaball.ViewJSON;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -19,8 +21,9 @@ public class Account implements Serializable {
     private int id;
     private String username;
     private String password;
-    private Set<FutsalField> futsalFields = new HashSet<FutsalField>(0);;
+    private Set<FutsalField> futsalFields = new HashSet<FutsalField>(0);
 
+    @JsonView(ViewJSON.AccountView.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id",unique = true, nullable = false)
@@ -32,8 +35,9 @@ public class Account implements Serializable {
         this.id = idSurveyer;
     }
 
+    @JsonView(ViewJSON.AccountView.class)
     @NotEmpty
-    @Column (name = "username")
+    @Column (name = "username" , unique = true)
     public String getUsername() {
         return username;
     }
@@ -42,6 +46,7 @@ public class Account implements Serializable {
         this.username = username;
     }
 
+    @JsonView(ViewJSON.AccountView.class)
     @NotEmpty
     @Column (name = "password")
     public String getPassword() {

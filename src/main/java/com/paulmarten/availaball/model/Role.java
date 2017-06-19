@@ -27,7 +27,7 @@ public class Role implements Serializable{
     }
 
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL , fetch = FetchType.LAZY)
     @JoinColumn(name = "id_account")
     public Account getAccount() {
         return account;

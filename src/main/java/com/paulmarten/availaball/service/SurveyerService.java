@@ -16,7 +16,6 @@ public class SurveyerService {
     @Autowired
     private SurveyerRepository surveyerRepository;
 
-
     public Account getAccount(int idAccount) {
         return surveyerRepository.findOne(idAccount);
     }

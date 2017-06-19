@@ -2,6 +2,8 @@ package com.paulmarten.availaball.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by paulms on 6/15/2017.
@@ -20,7 +22,7 @@ public class FutsalField implements Serializable {
     private String closingHours;
     private String price;
     private Account account;
-
+    private Set<DetailPrice> detailPrices = new HashSet<DetailPrice>(0);
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -97,12 +99,23 @@ public class FutsalField implements Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_surveyer")
+    @JoinColumn(name = "id_account")
     public Account getAccount() {
         return account;
     }
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    //Annotation for mapping one to many from futsalfield to detailprice/time
+
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "futsalField")
+    public Set<DetailPrice> getDetailPrices() {
+        return detailPrices;
+    }
+
+    public void setDetailPrices(Set<DetailPrice> detailPrices) {
+        this.detailPrices = detailPrices;
     }
 }

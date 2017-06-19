@@ -13,7 +13,7 @@ public class DetailPrice implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private int idDetailPrice;
-    private int idFutsalField;
+    private FutsalField futsalField;
     private String day;
     private String startTime;
     private String endTime;
@@ -30,13 +30,17 @@ public class DetailPrice implements Serializable{
         this.idDetailPrice = idDetailPrice;
     }
 
-    @Column (name = "id_futsal_field")
-    public int getIdFutsalField() {
-        return idFutsalField;
+    //Relation mapping from detail price to futsalfield
+
+//    @Column (name = "id_futsal_field")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_futsal_field")
+    public FutsalField getFutsalField() {
+        return futsalField;
     }
 
-    public void setIdFutsalField(int idFutsalField) {
-        this.idFutsalField = idFutsalField;
+    public void setFutsalField(FutsalField futsalField) {
+        this.futsalField = futsalField;
     }
 
     @Column (name = "day")
