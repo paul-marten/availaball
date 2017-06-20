@@ -1,0 +1,259 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="/admin/layout :: head">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!--<th:block th:include="/admin/layout :: navbar-header"></th:block>-->
+        <!--<th:block th:include="/admin/layout :: sidebar"></th:block>-->
+        
+ <div id="page-wrapper">
+  <div class="row" >
+                    <div class="col-lg-12">
+                        <div class="inline" style="float: left;">
+                       <label style="float: left">List Lapangan</label>
+                            <div class = "inline-right" > 
+                     <label>Filter</label>
+                            <input type="text" placeholder="Nama User"/>
+                            <a class="btn btn-default" type="submit" value="+ User" >+ User</a>
+                            </div>                            
+                        </div>
+                    </div>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                 <div class="line"></div>
+                        <div class="table-responsive">
+                           <table id="mytable" class="table table-bordred table-striped" align="">           
+        <thead>
+
+        <th>No</th>
+        <th>Nama</th>
+        <th>Lokasi</th>
+        <th>Jumlah <br>Lapangan</br> </th>
+        <th>Latest <br>Update</br></th>
+        <th>Surveyer</th>
+        <th></th>
+        </thead>
+        <tbody>
+        <tr>
+        <td>1</td>
+        <td>Bolalob Futsal Field</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Andrei Dharma</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>GOR Pocari</td>
+        <td>Jakarta Barat</td>
+        <td>6</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Gamal Adnando</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>My Futsal Puri</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Ahmad Cakduro</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>GVM Futsal Stadium</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Michael Hioe</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>Bolalob Futsal Field</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Andrei Dharma</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>Gor Pocari</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Andrei Dharma</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>Bolalob Futsal Field</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Andrei Dharma</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>Bolalob Futsal Field</td>
+        <td>Jakarta Barat</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+        <td>Andrei Dharma</td>
+        <td> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i></i> Edit</a>
+                        </li>
+                        <li>
+                            <a href="#"><i></i>Delete</a>
+                        </li>
+                    </ul></td>
+    </tr>
+    
+</tbody>
+</table>
+         </div>
+        
+        </div>
+     </div>
+    
+     <div class="clearfix"></div>
+        <ul class="pagination pull-right">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>     
+    </div>           
+    </div>
+</div>
+
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+      </div>
+          <div class="modal-body">
+          <div class="form-group">
+        <input class="form-control " type="text" placeholder="Mohsin"/>
+        </div>
+        <div class="form-group">
+        
+        <input class="form-control " type="text" placeholder="Irshad"/>
+        </div>
+        <div class="form-group">
+        <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+    
+        
+        </div>
+      </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
+    
+    
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+      </div>
+          <div class="modal-body">
+       
+       <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+       
+      </div>
+        <div class="modal-footer ">
+        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+      </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+      </body>
+  </html>
