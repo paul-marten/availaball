@@ -19,6 +19,16 @@ public class DetailPrice implements Serializable{
     private String endTime;
     private String price;
 
+    public DetailPrice(){}
+
+    public DetailPrice(FutsalField futsalField, String day, String startTime, String endTime, String price) {
+        this.futsalField = futsalField;
+        this.day = day;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.price = price;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id")

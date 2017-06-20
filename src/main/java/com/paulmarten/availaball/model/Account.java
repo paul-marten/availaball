@@ -23,7 +23,15 @@ public class Account implements Serializable {
     private String password;
     private Set<FutsalField> futsalFields = new HashSet<FutsalField>(0);
 
-    @JsonView(ViewJSON.AccountView.class)
+    public Account(){}
+
+    public Account(String username, String password, Set<FutsalField> futsalFields) {
+        this.username = username;
+        this.password = password;
+        this.futsalFields = futsalFields;
+    }
+
+    @JsonView(ViewJSON.RelationAccounttoFutsalField.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id",unique = true, nullable = false)

@@ -3,6 +3,9 @@ package com.paulmarten.availaball.controller;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.paulmarten.availaball.ViewJSON;
 import com.paulmarten.availaball.model.Account;
+import com.paulmarten.availaball.model.FutsalField;
+import com.paulmarten.availaball.repository.FutsalFieldRepository;
+import com.paulmarten.availaball.service.FutsalFieldService;
 import com.paulmarten.availaball.service.SurveyerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -25,6 +28,9 @@ public class SurveyerController {
     @Autowired
     private SurveyerService surveyerService;
 
+    @Autowired
+    private FutsalFieldService futsalFieldService;
+
     @JsonView(ViewJSON.AccountView.class)
     @RequestMapping(value = "/getid/{id}" , method = RequestMethod.POST , headers="Accept=application/json")
     public Account getId(@PathVariable int id){
@@ -33,7 +39,17 @@ public class SurveyerController {
 
     @RequestMapping(value="/login/{username}/{password}", method = RequestMethod.POST)
     public String loginAccount(@PathVariable String username, @PathVariable String password){
-//        return "Username anda =" + username + " password =" + password;
         return surveyerService.checkAccount(username,password);
+    }
+
+//    @RequestMapping(value="/getallfutsalfield", method = RequestMethod.POST , headers="Accept=application/json")
+//    public List<FutsalField> getAllFutsalField(){
+//        return futsalFieldService.findAllFutsalField();
+//    }
+
+    @JsonView(ViewJSON.FutsalFieldView.class)
+    @RequestMapping(value="/getallfutsalfield", method = RequestMethod.POST , headers="Accept=application/json")
+    public List<FutsalField> getAllFutsalField(){
+        return futsalFieldService.findAllFutsalField();
     }
 }
