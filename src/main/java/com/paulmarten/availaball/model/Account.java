@@ -21,9 +21,11 @@ public class Account implements Serializable {
     private int id;
     private String username;
     private String password;
+    private Role role;
+    //Mapping between account and futsal field
     private Set<FutsalField> futsalFields = new HashSet<FutsalField>(0);
 
-    @JsonView(ViewJSON.AccountView.class)
+    @JsonView(ViewJSON.AccountInFutsalFieldView.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id",unique = true, nullable = false)
@@ -57,6 +59,17 @@ public class Account implements Serializable {
         this.password = password;
     }
 
+    @JsonView(ViewJSON.AccountView.class)
+    @OneToOne(cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @JoinColumn(name = "role_id")
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "account")
     public Set<FutsalField> getFutsalFields() {
         return futsalFields;
@@ -65,4 +78,5 @@ public class Account implements Serializable {
     public void setFutsalFields(Set<FutsalField> futsalFields) {
         this.futsalFields = futsalFields;
     }
+
 }

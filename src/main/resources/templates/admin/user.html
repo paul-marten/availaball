@@ -1,0 +1,151 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User</title>
+<th:block th:replace ="/admin/layout :: head"></th:block>
+</head>
+
+<body>
+<div id="wrapper">
+    <div th:replace="/fragment/top :: top-header"></div>
+
+        <div id="page-wrapper">
+            <div layout:fragment="content">
+                <th:block layout:fragment="content">
+
+            <div class="container-fluid">
+                <!-- Page Heading -->
+
+                <div class="row">
+
+                    <div class="col-lg-12">
+                      <div class="col-md-4" style="padding-top: 20px;">
+                      <h4 style="text-decoration: none; font-family: Opensans-Regular;">User</h4> 
+                                </div>
+                    
+                         <div class="col-md-4" style="padding-top: 20px;">
+                             <form action="#" method="get">
+                                <label style="float: left; padding-left: 80px; padding-top: 10px;">Filter</label>
+                             <div class="input-group" style="float: right;">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                                 <input type="text" class="form-control countrycode"  placeholder="Nama Lapangan" />
+                    <span class="input-group-btn">
+                    </span>
+                </div>
+
+            </form>
+                        </div>
+                       
+        <div class="col-md-4" style="padding-top: 20px;">
+        
+         <button class="btn btn-default" type="submit" value="+ User" onclick="openCity(event,'+ User')"><b>+ User</b></button>
+        </div>
+
+       
+             </div>
+                        <div class="page-header">
+                              
+                        </div>
+
+                        <div class="col-lg-12">
+                         <div class="table-responsive">
+
+                         <table  class="table table-bordred table-striped center" >          
+                         <thead class="center">
+                         <th>No</th>
+                         <th>Nama</th>
+                         <th>Phone</th>
+                         <th>Email</th>
+                        <th>Total <br> Lapangan</br></th>
+                        <th>Latest <br/> Update</th>
+                           <th></th>
+                         </thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Andrei Dharma</td>
+        <td>+62121231123</td>
+        <td>andrei@gvmnetworks.com</td>
+        <td>120</td>
+        <td>05/04/2017 <br/> 15:42</td>
+       
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Fenny</td>
+        <td>+62121231123</td>
+        <td>fenny@gvmnetworks.com</td>
+        <td>12</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Ezra Marcella</td>
+        <td>+62121231123</td>
+        <td>ezra@gvmnetworks.com</td>
+        <td>31</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Audri Ijod</td>
+        <td>+62121231123</td>
+        <td>ijod@gvmnetworks.com</td>
+        <td>5</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Raka</td>
+        <td>+62121231123</td>
+        <td>raka@gvmnetworks.com</td>
+        <td>4</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Andrei</td>
+        <td>+62121231123</td>
+        <td>andrei@gvmnetworks.com</td>
+        <td>6</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+     <tr>
+        <td>7</td>
+        <td>Bobby</td>
+        <td>+62121231123</td>
+        <td>bobby@gvmnetworks.com</td>
+        <td>3</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Eko</td>
+        <td>+62121231123</td>
+        <td>eko@gvmnetworks.com</td>
+        <td>12</td>
+        <td>05/04/2017 <br/> 15:42</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+        
+    <div class="clearfix">
+        <ul class="pagination pull-right">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">10</a></li>
+  
+        </ul>     
+    </div>
+</div>
+</div>
+</div>
+</th:block>
+</div>
+</div>
+</div>
+</body>
+
+</html>

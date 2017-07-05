@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Availaball</title>
+<th:block th:replace ="/admin/layout :: head"></th:block>
+</head>
+<body>
+<!-- Header -->
+    <div id="wrapper">
+
+        <!-- Top Navigation -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"  th:fragment="top-header">
+            <div class="navbar-header" style="padding-left: 30px; padding-top: 20px;">
+            <a href="">05 April 2017</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown " style="padding-right: 30px;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
+                   <ul class="dropdown-menu">
+                       <li>
+                          <a href="#">Log Out</a>
+                        </li>
+                   </ul>
+                </li>
+            </ul>
+
+            <div class="nav navbar-right top-nav" style="padding-top: 5px;">
+                <div>
+                    <li>
+                        <a href="#" style="float: left;"> Happy Working</a>    
+                    </li>
+                </div> 
+                <div style="float: right; ">
+                    <li>
+                        <a href="#" >Bolalob</a>
+                    </li>
+                </div>
+            
+            </div>
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <img class="logo " src="/img/availaball.png"/>
+                    </li>
+                	<div class="list">
+                    <li>
+                        <button class="btn btns-primary btn-block"><a th:href="@{/admin/index}">Dashboard <i class="icon-dashboard " style="padding-right: 15px; padding-left:10px; text-align: center; "></i></a></button>
+                    </li>
+                    <li>
+                        <!--<button type="button" class="btn btns-primary btn-block" th:href="@{/admin/user}">User <i class="fa fa-user" style="padding-right: 25px; padding-left:20px; text-align: center; "></i></button>-->
+                        <button class="btn btns-primary btn-block" ><a th:href="@{/admin/user}">User <i class="fa fa-user " style="padding-right: 15px; padding-left:10px; text-align: center; "></i></a></button>
+                    </li>
+                    <li>
+                        <button class="btn btns-primary btn-block"><a th:href="@{/admin/user}">Map <i class="fa fa-map-marker" style="padding-right: 25px; padding-left:20px; text-align: center; "></i></a></button>
+                    </li>
+                </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
