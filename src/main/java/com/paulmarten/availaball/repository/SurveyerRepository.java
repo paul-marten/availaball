@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by paulms on 6/14/2017.
  */
 @Repository
-public interface SurveyerRepository extends JpaRepository<Account, Integer> {
+public interface SurveyerRepository extends CrudRepository<Account, Integer> {
 }

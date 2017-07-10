@@ -18,11 +18,7 @@ body {
 }
 
 #wrapper {
-<<<<<<< HEAD
     padding-left: 0;
-=======
-    padding: 0;
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 
 #page-wrapper {
@@ -43,11 +39,7 @@ body {
 
     #page-wrapper {
         padding: 10px;
-<<<<<<< HEAD
         padding-left: 102px;
-=======
-        
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
     }
 }
 
@@ -74,13 +66,8 @@ body {
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-<<<<<<< HEAD
 
     background-color: #E5f7ff;
-=======
-    color: #fff;
-    background-color: #000;
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -129,11 +116,7 @@ ul.alert-dropdown {
 @media(min-width:768px) {
     .side-nav {
         position: fixed;
-<<<<<<< HEAD
         top: 0;
-=======
-        top: 0px;
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
         left: 225px;
         width: 300px;
         margin-left: -225px;
@@ -148,25 +131,11 @@ ul.alert-dropdown {
 
     .side-nav>li>a {
         width: 225px;
-<<<<<<< HEAD
-=======
-        text-decoration-color: blue;
-    }
-     .side-nav>li>a:active {
-        width: 225px;
-        text-decoration-color: blue;
-
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
     }
 
     .side-nav li a:hover,
     .side-nav li a:focus {
-<<<<<<< HEAD
         text-decoration: none;
-=======
-        outline: none;
-        background-color: #000 !important;
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
     }
 }
 
@@ -178,7 +147,6 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-<<<<<<< HEAD
     color: #999;
             text-decoration: none;
 }
@@ -186,14 +154,6 @@ ul.alert-dropdown {
 .side-nav>li>ul>li>a:hover {
             text-decoration: none;
  
-=======
-  =
-}
-
-.side-nav>li>ul>li>a:hover {
- 
-    text-decoration-color: blue;
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 
 /* Flot Chart Containers */
@@ -266,7 +226,6 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
     color: #df8a13;
-<<<<<<< HEAD
 }
 
 .line{
@@ -400,6 +359,3 @@ text-align:center;
     .search-query:focus + button {
         z-index: 3;   
     }
-=======
-}
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362

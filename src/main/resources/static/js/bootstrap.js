@@ -2375,7 +2375,6 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
-<<<<<<< HEAD
 
 
 $(function(){
@@ -2453,5 +2452,3 @@ $(function() {
           $($(this).attr('href')).addClass('active');
        });
     });
-=======
->>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
