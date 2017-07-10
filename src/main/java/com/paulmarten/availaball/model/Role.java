@@ -1,8 +1,5 @@
 package com.paulmarten.availaball.model;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.paulmarten.availaball.Config.ViewJSON;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -15,9 +12,9 @@ public class Role implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private int id;
+    private Account account;
     private String role;
 
-    @JsonView(ViewJSON.RoleView.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id")
@@ -27,6 +24,17 @@ public class Role implements Serializable{
 
     public void setId(int id) {
         this.id = id;
+    }
+
+
+    @OneToOne(cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_account")
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     @Column (name = "role")

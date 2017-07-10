@@ -18,9 +18,23 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
   padding-left: 12px;
   padding-right: 8px;
 
+=======
+  text-align: right;
+}
+.fa:active {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: right;
+  text-decoration-color: solid blue;
+>>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
@@ -42,7 +56,11 @@
 }
 .fa-fw {
   width: 1.28571429em;
+<<<<<<< HEAD
   text-align: center;
+=======
+  text-align: right;
+>>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 .fa-ul {
   padding-left: 0;
@@ -189,7 +207,10 @@
 }
 .fa-user:before {
   content: "\f007";
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
 }
 .fa-film:before {
   content: "\f008";

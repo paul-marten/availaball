@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
@@ -47,3 +48,72 @@
 </body>
 
 </html>
+=======
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<head>
+    <title>Availaball</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link th:href="@{/css/sb-admin.css}" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
+    <!-- jQuery -->
+    <script th:src="@{/js/jquery.js}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div th:fragment="navbar-header" class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">05 April 2015</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+            <div class="welcomes">Welcome</div>
+                <div style="float:left;" class="welcomes">Bolalob</div>
+                <li class="dropdown" style="float: left;">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i> </a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#"><i></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+          <div th:fragment="sidebar" class="collapse navbar-collapse ">
+                <ul class="nav navbar-nav side-nav list">
+                    <li class=""><img class="logo" src="/img/availaball.png" alt="Availaballs"/></li>
+                    <li class=""><a href="tables.html">Dashboard <i class="fa fa-fw fa-bar-chart-o"></i> </a></li>
+                    <li class=""><a href="tables.html"> User <i class="fa fa-user" aria-hidden="true"></i></a></li>
+                    <li><a href="forms.html"> Map <i class="fa fa-map-marker" aria-hidden="true"></i></a></li>                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+ 
+  </div>
+</body>
+</head>
+</html>
+  
+>>>>>>> cb2b1b34f3f0d33cb90ae3cb0e5381dae788d362
