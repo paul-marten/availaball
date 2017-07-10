@@ -1,5 +1,8 @@
 package com.paulmarten.availaball.model;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -20,6 +23,7 @@ public class DetailPrice implements Serializable{
     private String price;
 
     @Id
+    @JsonView(DataTablesOutput.View.class)
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (name = "id")
     public int getIdDetailPrice() {
@@ -33,6 +37,7 @@ public class DetailPrice implements Serializable{
     //Relation mapping from detail price to futsalfield
 
 //    @Column (name = "id_futsal_field")
+    @JsonView(DataTablesOutput.View.class)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_futsal_field")
     public FutsalField getFutsalField() {
@@ -44,6 +49,7 @@ public class DetailPrice implements Serializable{
     }
 
     @Column (name = "day")
+    @JsonView(DataTablesOutput.View.class)
     public String getDay() {
         return day;
     }
@@ -53,6 +59,7 @@ public class DetailPrice implements Serializable{
     }
 
     @Column (name = "start_time")
+    @JsonView(DataTablesOutput.View.class)
     public String getStartTime() {
         return startTime;
     }
@@ -62,6 +69,7 @@ public class DetailPrice implements Serializable{
     }
 
     @Column (name = "end_time")
+    @JsonView(DataTablesOutput.View.class)
     public String getEndTime() {
         return endTime;
     }
@@ -71,6 +79,7 @@ public class DetailPrice implements Serializable{
     }
 
     @Column (name = "price")
+    @JsonView(DataTablesOutput.View.class)
     public String getPrice() {
         return price;
     }

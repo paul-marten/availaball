@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User</title>
+<th:block th:replace ="/admin/layout :: head"></th:block>
+</head>
+
+<body>
+<div id="wrapper">
+    <div th:replace="/fragment/top :: top-header"></div>
+
+        <div id="page-wrapper">
+            <div layout:fragment="content">
+                <th:block layout:fragment="content">
+
+            <div class="container-fluid">
+                <!-- Page Heading -->
+
+                <div class="row">
+
+                    <div class="col-lg-12">
+                      <div class="col-md-4" style="padding-top: 20px;">
+                      <h4 style="text-decoration: none; ">User</h4> 
+                                </div>
+                    
+                         <div class="col-md-4" style="padding-top: 20px;">
+                             <form action="#" method="get">
+                                <label style="float: left; padding-left: 80px; padding-top: 10px;">Filter</label>
+                             <div class="input-group" style="float: right;">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                                 <input type="text" class="form-control countrycode"  placeholder="Nama User" />
+                    <span class="input-group-btn">
+                    </span>
+                </div>
+
+            </form>
+                        </div>
+                       
+        <div class="col-md-4" style="padding-top: 20px;">
+        
+         <button class="btn btn-default" type="submit" value="+ User" onclick="openCity(event,'+ User')"><b>+ User</b></button>
+        </div>
+
+       
+             </div>
+                        
+
+                        <div class="col-lg-12">
+                         <div class="table-responsive">
+<hr>
+                        </hr>
+                         <table id ="UserTable" class="table table-bordred table-striped center">          
+                         <thead class="center">
+                         <th>No</th>
+                         <th>Nama</th>
+                         <th>Phone</th>
+                         <th>Email</th>
+                        <th>Total <br> Lapangan</br></th>
+                        <th>Latest <br/> Update</th>
+                           <th></th>
+                         </thead>
+<tbody>
+    
+    </tbody>
+</table>
+</div>
+   
+</div>
+</div>
+</div>
+</th:block>
+</div>
+</div>
+</div>
+</body>
+
+</html>

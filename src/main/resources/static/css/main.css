@@ -1,0 +1,15 @@
+html {
+	background-color: white;
+}
+#futsalfieldsTable_length {
+	display: none;
+}
+#futsalfieldsTable_filter {
+	display: none;
+}
+#futsalfieldsTable {
+	width: 100% !important;
+}
+#futsalfieldsTable .sorting {
+	width: 19% !important;
+}
